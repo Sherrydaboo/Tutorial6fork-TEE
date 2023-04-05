@@ -1,0 +1,18 @@
+# add a new figure
+```{r load_library}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r data}
+data("cars")
+head(cars)
+```
+```{r}
+cars %>%
+  ggplot(
+    aes(x= speed,
+        y= dist)
+  ) + geom_point()
+```
+
